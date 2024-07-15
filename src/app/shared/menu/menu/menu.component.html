@@ -1,0 +1,33 @@
+<!--Menu-->
+<nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <img src="/assets/img/snakers-logo.png" alt="Instagram Logo" class="logo">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="/auth/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/auth/nike">Nike</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/auth/adidas">Adidas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/auth/reebok">Reebok</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/auth/puma">Puma</a>
+          </li>
+        </ul>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <a class="btn btn-secondary" href="/auth/register" role="button">Registrarse</a>
+              <a class="btn btn-primary" href="/auth/login" role="button">Login</a>   
+              <button type="button" class="boton nav-link active btn btn-danger invisible" (click)="logout()">Cerrar Sesion</button>
+        </div>
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,35 @@
+<div class="text-center" style="height: 5rem;">
+    <div class="">
+        <h1>Listado de Productos Adidas</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div *ngIf="productos && productos.length >0; else noData" class="d-flex justify-content-center text-center flex-wrap">
+                <div *ngFor="let producto of productos" class="card mx-2 my-2" style="width: 15rem;">
+                    <div class="card-header p-0">
+                        <img src="{{producto.imagen}}" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{producto.nombre}}</h5>
+                        <p class="card-text">{{producto.descripcion}}</p>
+                        <p class="card-text">${{producto.precio}}</p>
+                        <p class="card-text">Sku : {{producto.id}}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            <<ng-template #noData>
+                <p>No hay Datos disponibles</p>
+            </ng-template>
+
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>

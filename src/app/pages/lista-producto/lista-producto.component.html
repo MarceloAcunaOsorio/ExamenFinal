@@ -1,0 +1,56 @@
+<div class="container mt-3">
+    <h2>Lista de Productos</h2>
+    <hr>
+
+    <div *ngIf="productos && productos.length > 0; else noData">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>precio</th>
+                    <th>descripcion</th>
+                    <th>imagen</th>
+                    <th>categoria</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let producto of productos">
+                    <td>{{ producto.id }}</td>
+                    <td>{{ producto.nombre }}</td>
+                    <td>{{ producto.precio }}</td>
+                    <td>{{ producto.descripcion }}</td>
+                    <td>{{ producto.imagen }}</td>
+                    <td>{{ producto.categoria}}</td>
+                    <td>
+                        <button class="btn btn-primary" (click)="modificar(producto)">Modificar</button>
+                        <button class="btn btn-danger" (click)="eliminar(producto)">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <ng-template #noData>
+        <p>No hay datos disponibles</p>
+    </ng-template>
+
+    <div class="mt-3">
+        <h3>Agregar o Modificar productos</h3>
+        <form (ngSubmit)="submitForm()">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" [(ngModel)]="nombre" name="nombre" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="edad">Precio:</label>
+                <input type="number" id="precio" [(ngModel)]="precio" name="precio" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="edad">Descripcion:</label>
+                <input type="number" id="descripcion" [(ngModel)]="descripcion" name="descripcion" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary mt-2">Agregar</button>
+        </form>
+    </div>
+</div>
+

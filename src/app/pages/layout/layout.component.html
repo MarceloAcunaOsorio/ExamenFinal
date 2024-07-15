@@ -1,0 +1,52 @@
+<div class=".container-fluid">
+   <app-navbar></app-navbar>
+</div>
+
+<div class="container-fluid my-2" *ngIf="userData">
+   <div class="row justify-content-between align-items-center my-2">
+      <div class="col-4 d-flex flex-column align-items-center">
+         <div class="instagram-profile">
+            <img [src]="userData.profilePicUrl || '/img/profile-placeholder.png'" alt="Profile Picture">
+         </div>
+         <h5 class="fw-bold mb-2">{{userData.username}}</h5>
+      </div>
+   </div>
+   <app-profile-edit></app-profile-edit>
+
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+
+   <app-lista-producto></app-lista-producto>
+   
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <!--<app-profile-tabs *ngIf="getPostCount() > 0"></app-profile-tabs>
+   <div *ngIf="getPostCount() === 0" class="text-center mt-4">
+      <p>No posts yet</p>
+   </div>
+   
+   
+     <div class="col-8 d-flex flex-row pt-5">
+         <div class="col d-flex flex-column align-items-center">
+            <div class="modal fade" id="postUploadModal" tabindex="-1" aria-labelledby="postUploadModalLabel" aria-hidden="true">
+               <div class="modal-dialog">
+                 <div class="modal-content">
+                   <h6>imagen</h6><app-post-upload></app-post-upload>
+                 </div>
+               </div>
+             </div>
+         </div>
+      </div>
+   
+   
+   -->
+</div>
+<app-footer></app-footer>
